@@ -1,0 +1,117 @@
+:root {
+    --bg-color: #FDFBF7; /* Crema papel */
+    --primary-pink: #ffc3a0; /* Rosa suave degradado */
+    --primary-coffee: #a1887f; /* Café suave */
+    --text-color: #4a4a4a; /* Gris oscuro elegante, no negro */
+    --gold: #C5A059; /* Dorado Blair Waldorf */
+    --paper-shadow: 0 10px 30px rgba(161, 136, 127, 0.15);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d7a99c' fill-opacity='0.05'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' /%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Marco Dorado Fino (Blair Style) */
+.frame-border {
+    position: fixed; top: 15px; left: 15px; right: 15px; bottom: 15px;
+    border: 1px solid var(--gold);
+    pointer-events: none; z-index: 100;
+}
+.frame-border::after {
+    content: ''; position: absolute; top: 4px; left: 4px; right: 4px; bottom: 4px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+/* Tipografía */
+h1, h2 { font-family: 'Playfair Display', serif; }
+.display-title { font-size: 3.5rem; color: var(--primary-coffee); font-weight: 700; letter-spacing: -1px; }
+.subtitle { font-family: 'La Belle Aurore', cursive; font-size: 1.5rem; color: #8d6e63; margin-top: -10px; }
+.badge-custom { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 3px; color: var(--gold); border-bottom: 1px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+
+/* Tarjetas Artísticas */
+.art-card {
+    background: #fff;
+    border-radius: 2px; /* Bordes casi rectos, más elegante */
+    padding: 40px 30px;
+    box-shadow: var(--paper-shadow);
+    height: 100%;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+.art-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(161, 136, 127, 0.25); }
+
+/* Pincelada Decorativa */
+.brush-stroke {
+    display: block; width: 60px; height: 3px;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 100%);
+    margin: 10px 0 20px 0; border-radius: 5px;
+}
+
+/* Lista de Deseos */
+.wish-list { list-style: none; padding: 0; margin-top: 20px; }
+.wish-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(161, 136, 127, 0.3);
+    font-size: 1.05rem;
+    display: flex; align-items: baseline;
+}
+.wish-list li span {
+    color: var(--gold); font-family: 'Cinzel', serif; font-weight: bold; margin-right: 15px; font-size: 0.9rem;
+}
+.wish-list li:last-child { border-bottom: none; }
+
+/* Botón Elegante */
+.btn-elegant {
+    background-color: var(--primary-coffee);
+    color: white; border: none;
+    padding: 15px 40px; font-family: 'Cinzel', serif;
+    letter-spacing: 2px; font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-coffee);
+}
+.btn-elegant:hover {
+    background-color: transparent; color: var(--primary-coffee);
+    cursor: pointer;
+}
+
+.signature { font-family: 'La Belle Aurore', cursive; font-size: 1.8rem; color: var(--gold); }
+.divider-icon { font-size: 2rem; margin-top: 20px; opacity: 0.5; }
+
+/* Animaciones suaves */
+.animate-up { opacity: 0; transform: translateY(30px); animation: fadeInUp 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1); }
+.delay-1 { animation-delay: 0.2s; } .delay-2 { animation-delay: 0.4s; } .delay-3 { animation-delay: 0.6s; }
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Mobile fixes */
+@media (max-width: 600px) {
+    .display-title { font-size: 2.5rem; }
+    .art-card { padding: 30px 20px; }
+    .frame-border { top: 10px; bottom: 10px; left: 10px; right: 10px; }
+}
+
+/* Estilo para la Posdata */
+.posdata-container {
+    border-top: 1px solid rgba(197, 160, 89, 0.3); /* Línea dorada sutil arriba */
+    padding-top: 20px;
+    max-width: 80%; /* Para que no se estire demasiado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.posdata-text {
+    font-family: 'Lato', sans-serif; /* O puedes usar 'Playfair Display' si quieres más elegancia */
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #8d6e63; /* Café suave */
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.5); /* Fondo medio transparente */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
